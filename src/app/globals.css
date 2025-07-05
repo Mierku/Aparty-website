@@ -2,6 +2,9 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@utility bg-beautify {
+  background: linear-gradient(135deg, #e3f2fd 0%, #90caf9 100%);
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -31,6 +34,7 @@
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-secondary: var(--secondary);
+  --color-beautify: var(--beautify);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
   --color-popover-foreground: var(--popover-foreground);
@@ -51,7 +55,8 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: rgb(231, 33, 115);
+  --beautify: linear-gradient(135deg, #e3f2fd 0%, #90caf9 100%);
+  --primary: #098aec;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);

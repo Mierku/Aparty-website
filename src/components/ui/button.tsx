@@ -35,7 +35,7 @@ const buttonVariants = cva(
   },
 );
 
-type ButtonProps = React.ComponentProps<"button"> &
+type ButtonProps = Omit<React.ComponentProps<"button">, "prefix" | "suffix"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
     prefix?: React.ReactNode;

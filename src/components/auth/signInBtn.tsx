@@ -1,14 +1,9 @@
 import { signIn } from "@/lib/auth";
 
-export default function SignIn() {
-  return (
-    <form
-      action={async () => {
-        "use server";
-        await signIn("google");
-      }}
-    >
-      <button type="submit">登录</button>
-    </form>
-  );
+async function signInRequest() {
+  "use server";
+  await signIn("google");
+}
+export default function SignInBtn() {
+  return <button onClick={signInRequest}>登录</button>;
 }
